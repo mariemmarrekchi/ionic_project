@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { InscriptionService } from '../services/inscription.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+private getId:any;
+  constructor(private service:InscriptionService,private router:Router) {
 
-  constructor() {}
-
+   
+  }
+  Deconnecter() {
+    this.service.deconnecter();
+    this.router.navigateByUrl('/authentification');
+   }
+   
 }

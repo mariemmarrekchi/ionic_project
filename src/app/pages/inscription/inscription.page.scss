@@ -1,0 +1,27 @@
+ion-card {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../../assets/img/inscr.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+ion-header {
+    text-align: center;
+}
+
+form {
+    margin-top: 150px;
+    text-align: center;
+}
+
+div {
+    color: rgba(22, 33, 83, 0.712);
+    font-weight: bold;
+    text-align: center;
+}
+
+ion-button {
+    margin-left: 20px
+}

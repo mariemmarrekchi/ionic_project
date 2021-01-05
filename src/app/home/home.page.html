@@ -1,20 +1,75 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+ <ion-toolbar color="light">
+    <ion-menu-button slot="start"></ion-menu-button>
+
+ <ion-title>
+ Accueil
+ </ion-title>
+ </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<body>
+<!-- <ion-button [routerLink]="['/authentification']">Déconnexion</ion-button>-->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-grid>
+ <ion-row>
+ <ion-col [routerLink]="['/menu/agence']">
+ <div class="ion-padding-start">
+ <ion-img src="../../../assets/img/home1.jpg"></ion-img>
+ <ion-card-content>
+ <ion-card-title>
+Liste d'Agence
+ </ion-card-title>
+ </ion-card-content>
+ </div>
+ </ion-col>
+
+ <ion-col size="1">
+ </ion-col>
+ <ion-col [routerLink]="['/menu/tickets']">
+ <div class="ion-padding-end">
+ <ion-img src="../../../assets/img/home2.jpeg"></ion-img>
+ <ion-card-content>
+ <ion-card-title>
+Reservation Tickets
+ </ion-card-title>
+ </ion-card-content>
+ </div>
+ </ion-col>
+ </ion-row>
+
+ <ion-row>
+ <ion-col [routerLink]="['/menu/agence-details']">
+ <div class="ion-padding-start">
+ <ion-img src="../../../assets/img/home3.png"></ion-img>
+ <ion-card-content>
+ <ion-card-title>
+Details Agence 
+ </ion-card-title>
+ </ion-card-content>
+ </div>
+ </ion-col>
+
+ <ion-col size="1">
+ </ion-col>
+ 
+ <ion-col (click)=" Deconnecter()">
+ <div class="ion-padding-end">
+ <ion-img src="../../../assets/img/home4.png"></ion-img>
+ </div>
+ <ion-card-content class="ion-padding-start">
+ <ion-card-title>
+ Déconnexion
+ </ion-card-title>
+ </ion-card-content>
+ </ion-col>
+ </ion-row>
+ </ion-grid></body>
+
 </ion-content>
+
+
+ 
+
+

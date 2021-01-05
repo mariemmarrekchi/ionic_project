@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>agence</ion-title>
+       <ion-menu-button slot="start"></ion-menu-button>
+
+ 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+<body>
+
+<ion-card *ngIf="list">
+ <ion-card-content >
+ <ion-item *ngFor=" let l of list;index as i" >
+  <ion-list>
+
+   <ion-item  color="primary">
+ <ion-label><b>Numéro</b>  <strong> {{list[i].id}}</strong></ion-label>
+ </ion-item>
+
+ <ion-item>
+ <ion-label> Nom <strong> {{list[i].nom}}</strong></ion-label>
+ </ion-item>
+
+ <ion-item>
+ <ion-label>Adresse :&nbsp;<strong>{{list[i].adresse}}</strong></ion-label>
+ </ion-item>
+
+ <ion-item>
+  <ion-label>Telephone :&nbsp;<strong>{{list[i].tel}}</strong></ion-label>
+   </ion-item>
+ </ion-list>
+ 
+ 
+ </ion-item>
+ </ion-card-content>
+ </ion-card>
+ </body>
+</ion-content>

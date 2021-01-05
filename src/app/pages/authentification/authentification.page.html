@@ -1,0 +1,38 @@
+
+<ion-header>
+ <ion-toolbar color="secondary">
+ <ion-title>Bienvenue Agence Mimi <div>Authentification</div> </ion-title>
+ </ion-toolbar>
+</ion-header>
+<body>
+
+<ion-content  >
+
+<ion-card>
+
+  <ion-card-content>
+
+   <form #f="ngForm" (ngSubmit)="onLogin(f.value)">
+    
+<ion-item >
+ <ion-input type="email" name="login" shape="round" placeholder="login" [(ngModel)]="login" ></ion-input>
+ 
+</ion-item>
+<br/>
+<ion-item  >
+ <ion-input type="password"  shape="round"  name="password"   [type]="fieldTextType ? 'text' : 'password'"  id="password" placeholder="Mot de passe" ngModel></ion-input>
+ <ion-icon slot="end" color="primary" name="eye" (click)="toggleFieldTextType()"></ion-icon>
+</ion-item >
+ <br/>
+
+<ion-button type="submit" shape="round " color="primary"expand="full">Connexion</ion-button>
+
+
+</form>
+<ion-button type="button" (click)="register()" shape="round "color="primary" expand="full">j'ai pas un compte</ion-button>
+</ion-card-content>
+</ion-card>
+</ion-content>
+
+</body>
+

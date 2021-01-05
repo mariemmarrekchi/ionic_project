@@ -1,0 +1,42 @@
+<ion-header>
+ <ion-toolbar color="tertiary">
+ <ion-title>Bienvenue Agence Mimi  <div> Inscription</div>  </ion-title>
+ </ion-toolbar>
+</ion-header>
+<body>
+<ion-content>
+ <ion-card>
+   <ion-card-content>
+ 
+ 
+ <form #f="ngForm" (ngSubmit)="onCreerUtilisateur(f.value)">
+ <ion-item>
+ <ion-input type="text" name="nom" placeholder="nom" ngModel></ion-input>
+ </ion-item>
+
+
+ <ion-item>
+ <ion-input type="text" name="prenom" placeholder="prenom"ngModel></ion-input>
+
+ </ion-item>
+
+ <ion-item>
+ <ion-input type="text" name="login" placeholder="login"ngModel></ion-input>
+
+ </ion-item>
+ 
+ <ion-item>
+ <ion-input type="password" name="password" placeholder="Mot de passe"ngModel></ion-input>
+ </ion-item>
+
+ <ion-item>
+ <ion-button type="submit" shape="round" expand="full"> Inscription</ion-button>
+ <ion-button type="button" shape="round" (click)="onGoLogin()" expand="full">  J'ai déja un compte</ion-button>
+ </ion-item>
+
+ </form>
+
+   </ion-card-content>
+</ion-card>
+</ion-content>
+</body>
